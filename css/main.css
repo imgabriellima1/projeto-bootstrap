@@ -1,0 +1,158 @@
+/* Global Colors - Cores para todo o site */
+:root {
+    --default-color: #e7e7e7; /* Cor texto */
+    --background-color: #444; /* Cor de fundo */
+    --heading-color: #1c1a1a; /* Cor do cabeçalho (títulos) */
+    --accent-color: #0e7adf; /* Cor de destaque */
+    --surface-color: #c3c0c0; /* Cor de fundo dos cards */
+    --contrast-color: #444; /* Cor de contraste */
+}
+
+/* Nav Menu  Colors */
+:root {
+    --nav-color: #e7e7e7;
+    --nav-hover-color: #428bca; 
+    --nav-dropdown-color: #e7e7e7; 
+    --nav-dropdown-hover: #428bca; 
+}
+
+body {
+    background-color: var(--background-color);
+    color:var(--default-color);
+
+}
+
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: color-mix(in srgb, var(--accent-color), transparent 55%);
+}
+
+/* Header */
+.header {
+    background-color: var(--background-color);
+    color: var(--default-color);
+    padding: 15px 0;
+    transition: all 0.5s ease;
+    z-index: 1000;
+    text-align: center;
+}
+
+.header .logo {
+    line-height: 1;
+}
+
+/* Logo da empresa */
+.header .logo h1 {
+    font-size: 30px;
+    margin: 0;
+    font-weight: 700;
+    color: var(--heading-color);
+}
+
+.scrolled .header {
+    box-shadow: 0 0 18px rgba(0, 0, 0, 0.5);
+
+}
+
+.navmenu {
+    padding: 0;
+}
+
+.navmenu ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+.navmenu li {
+    position: relative;
+}
+
+.navmenu a, 
+.navmenu a:focus {
+    color: var(--nav-color);
+    padding: 18px 15px;
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    white-space: nowrap;
+    transition: 0.3s;
+}
+
+
+.navmenu a i,
+.navmenu a:focus i {
+    font-size: 12px;
+    line-height: 0;
+    margin-left: 5px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: 0.3s;
+    background-color: color-mix(in srgb, var(--accent-color), transparent 80%);
+}
+
+.navmenu a:hover,
+.navmenu a:focus i:hover {
+    background-color: var(--accent-color);
+    color: var(--contrast-color);
+}
+
+.navmenu .dropdown ul {
+    margin: 0;
+    padding: 10px 0;
+    display: block;
+    position: absolute;
+    visibility: hidden;
+    left: 14px;
+    top: 130%;
+    opacity: 0;
+    border-radius: 4px;
+    z-index: 99;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1 );
+}
+
+.navmenu .dropdown ul li {
+    width: 200px;
+}
+
+.navmenu .dropdown ul li a {
+    padding: 10px 20px;
+    font-size: 15px;
+    text-transform: none;
+    color: var(--default-color);
+
+}
+
+.navmenu .dropdown:hover>ul {
+    top: 100%;
+    left: 0;
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.3s ease;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--heading-color);
+}
+
+
+/* Menu Mobile */
+@media (max-width: 1199px) {
+
+    
+}
