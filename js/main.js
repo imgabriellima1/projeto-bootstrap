@@ -7,8 +7,15 @@
   function toggleScrolled() {
     const selectBody = document.querySelector('body');
     const selectHeader = document.querySelector('#header');
+    const logoImg = document.querySelector('.logo img'); // Seleciona a imagem da logo
     if (!selectHeader.classList.contains('scroll-up-sticky') && !selectHeader.classList.contains('sticky-top') && !selectHeader.classList.contains('fixed-top')) return;
-    window.scrollY > 100 ? selectBody.classList.add('scrolled') : selectBody.classList.remove('scrolled');
+    if (window.scrollY > 100) {
+      selectBody.classList.add('scrolled');
+      if (logoImg) logoImg.src = 'img/ceva-logo-secundario.png'; // Caminho da logo ao rolar
+    } else {
+      selectBody.classList.remove('scrolled');
+      if (logoImg) logoImg.src = 'img/ceva-logo.png'; // Caminho da logo padrão
+    }
   }
 
   document.addEventListener('scroll', toggleScrolled);
